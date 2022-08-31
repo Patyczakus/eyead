@@ -89,7 +89,7 @@ function ad_network (newAd = Boolean()) {
 }
 
 window.onload = () => {
-    if (hash === "#prop3") body.style.height = "820px"
+    if (hash === "#prop3") body.classList.add("prop3")
 
     ad_network(true)
 }
