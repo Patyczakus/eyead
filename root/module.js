@@ -34,6 +34,59 @@ var rootTable = [
             importID: 0
         }
     },
+    {
+        // od Eliciarski-chan#1499
+        isImport: false,
+        index: {
+            behavior: {
+                title: "🦊Lisy Elity🦊",
+                href: "https://discord.gg/uHY4wbE83y",
+                blockedhostes: [
+                    "discord.gg"
+                ]
+            },
+            constant: {
+                prop1: [ "id3/prop1/pngFile", 200, 200 ], /* kwadrat */
+                prop2: null, /* ala banner */
+                prop3: null, /* odwrócony banner */
+            }
+        }
+    },
+    {
+        // promocja reklamowa
+        isImport: true,
+        index: {
+            importID: 3
+        }
+    },
+    {
+        // promocja reklamowa
+        isImport: true,
+        index: {
+            importID: 3
+        }
+    },
+    {
+        // promocja reklamowa
+        isImport: true,
+        index: {
+            importID: 3
+        }
+    },
+    {
+        // promocja reklamowa
+        isImport: true,
+        index: {
+            importID: 3
+        }
+    },
+    {
+        // promocja reklamowa
+        isImport: true,
+        index: {
+            importID: 3
+        }
+    },
 ]
 
 function ad_network (newAd = Boolean()) {
@@ -64,7 +117,7 @@ function ad_network (newAd = Boolean()) {
         var root = rootTable[random].index
     }
 
-    if (location == null || ~root.behavior.blockedhostes.indexOf(location.hostname)) return ad_network()
+    if (location == null || ~root.behavior.blockedhostes.indexOf(location.hostname)) return ad_network(true)
 
     location[0] = location[0]
         .replace("pngFile", "main.png")
