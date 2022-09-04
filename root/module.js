@@ -87,6 +87,23 @@ var rootTable = [
             importID: 3
         }
     },
+    {
+        isImport: false,
+        index: {
+            behavior: {
+                title: "EyeAd",
+                href: "https://eyead.tk",
+                blockedhostes: [
+                    "eyead.tk"
+                ]
+            },
+            constant: {
+                prop1: [ "eyead/prop1/pngFile", 200, 200 ], /* kwadrat */
+                prop2: [ "eyead/prop2/pngFile", 560, 200 ], /* ala banner */
+                prop3: [ "eyead/prop3/pngFile", 200, 560 ], /* odwrócony banner */
+            }
+        }
+    }
 ]
 
 function ad_network (newAd = Boolean()) {
@@ -117,7 +134,7 @@ function ad_network (newAd = Boolean()) {
         var root = rootTable[random].index
     }
 
-    if (location == null || ~root.behavior.blockedhostes.indexOf(location.hostname)) return ad_network(true)
+    if (location == null || ~root.behavior.blockedhostes.indexOf(window.parent.location.hostname)) return ad_network(true)
 
     location[0] = location[0]
         .replace("pngFile", "main.png")
