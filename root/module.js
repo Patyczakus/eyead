@@ -88,6 +88,7 @@ var rootTable = [
         }
     },
     {
+        // EyeAd
         isImport: false,
         index: {
             behavior: {
@@ -104,6 +105,30 @@ var rootTable = [
             }
         }
     }
+    {
+        isImport: true,
+        index: {
+            importID: 9
+        }
+    },
+    {
+        isImport: true,
+        index: {
+            importID: 9
+        }
+    },
+    {
+        isImport: true,
+        index: {
+            importID: 9
+        }
+    },
+    {
+        isImport: true,
+        index: {
+            importID: 9
+        }
+    },
 ]
 
 function ad_network (newAd = Boolean()) {
