@@ -159,7 +159,7 @@ function ad_network (newAd = Boolean()) {
         var root = rootTable[random].index
     }
 
-    if (location == null /* || ~root.behavior.blockedhostes.indexOf(window.parent.location.hostname) */) return ad_network(true)
+    if (location == null) return ad_network(true)
 
     location[0] = location[0]
         .replace("pngFile", "main.png")
