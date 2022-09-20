@@ -12,7 +12,8 @@ var rootTable = [
                 href: "https://patryktopek.tk",
                 blockedhostes: [
                     "patryktopek.tk",
-                    "patyczakus.github.io"
+                    "patyczakus.github.io",
+                    "127.0.0.1"
                 ]
             },
             constant: {
@@ -104,7 +105,7 @@ var rootTable = [
                 prop3: [ "eyead/prop3/pngFile", 200, 560 ], /* odwrócony banner */
             }
         }
-    }
+    },
     {
         isImport: true,
         index: {
@@ -141,8 +142,7 @@ function ad_network (newAd = Boolean()) {
  
     if (rootTable[random].isImport) {
         try {
-            var location;
-            eval (`location = rootTable[rootTable[random].index.importID].index.constant.prop${type}`)
+            var rootParent = rootTable[rootTable[random].index.importID].index;
         } catch (err) {
             return console.error("Znaleziono błąd!", err, "\n\nZatrzymuję skrypt...")
         }
@@ -150,23 +150,26 @@ function ad_network (newAd = Boolean()) {
         var root = rootTable[rootTable[random].index.importID].index
     } else {
         try {
-            var location;
-            eval (`location = rootTable[random].index.constant.prop${type}`)
+            var rootParent = rootTable[random].index;
         } catch (err) {
             return console.error("Znaleziono błąd!", err, "\n\nZatrzymuję skrypt...")
         }
+        
+        var location;
+        eval (`location = rootParent.constant.prop${type}`)
 
         var root = rootTable[random].index
     }
 
-    if (location == null) return ad_network(true)
+
+    if (location == null || rootParent.behavior.blockedhostes.indexOf(window.parent.location.hostname) > -1) return ad_network(true)
 
     location[0] = location[0]
         .replace("pngFile", "main.png")
         .replace("jpgFile", "main.jpg")
         .replace("gifFile", "main.gif")
 
-    if (newAd) console.log({ loc: location, type: type, random: random, imported: rootTable[random].isImport })
+    if (newAd) console.log({ loc: location, typeID: type, random: random, imported: rootTable[random].isImport, devInfo: [ rootParent.behavior.blockedhostes.indexOf(window.parent.location.hostname) == -1, rootParent ] })
 
     if (!newAd) {
         if (type != acctualType) {
