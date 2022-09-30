@@ -2,9 +2,10 @@ var body = document.body
 var hash = location.hash
 var random, acctualType
 
-var rootTable = [ 
+var rootTable = [
     {
         // To można ominąć, to moja strona ~patYczakus
+        // id: 1
         isImport: false,
         index: {
             behavior: {
@@ -17,19 +18,21 @@ var rootTable = [
                 ]
             },
             constant: {
-                prop1: [ "id0/prop1/pngFile", 200, 200 ], /* kwadrat */
-                prop2: [ "id0/prop2/pngFile", 444, 200 ], /* ala banner */
-                prop3: [ "id0/prop3/pngFile", 200, 444 ], /* odwrócony banner */
+                prop1: [ "id0/prop1/pngFile", 200, 200 ],
+                prop2: [ "id0/prop2/pngFile", 444, 200 ],
+                prop3: [ "id0/prop3/pngFile", 200, 444 ],
             }
         }
     },
     {
+        // nadane od admina
         isImport: true,
         index: {
             importID: 0
         }
     },
     {
+        // nadane od admina
         isImport: true,
         index: {
             importID: 0
@@ -37,6 +40,7 @@ var rootTable = [
     },
     {
         // od Eliciarski-chan#1499
+        // id: 3
         isImport: false,
         index: {
             behavior: {
@@ -47,9 +51,9 @@ var rootTable = [
                 ]
             },
             constant: {
-                prop1: [ "id3/prop1/pngFile", 200, 200 ], /* kwadrat */
-                prop2: null, /* ala banner */
-                prop3: null, /* odwrócony banner */
+                prop1: [ "id3/prop1/pngFile", 200, 200 ], 
+                prop2: [ "id3/prop1/pngFile", 200, 200 ], // pobrane od rodzica
+                prop3: [ "id3/prop1/pngFile", 200, 200 ], // pobrane od rodzica
             }
         }
     },
@@ -90,6 +94,7 @@ var rootTable = [
     },
     {
         // EyeAd
+        // id: 9
         isImport: false,
         index: {
             behavior: {
@@ -100,34 +105,169 @@ var rootTable = [
                 ]
             },
             constant: {
-                prop1: [ "eyead/prop1/pngFile", 200, 200 ], /* kwadrat */
-                prop2: [ "eyead/prop2/pngFile", 560, 200 ], /* ala banner */
-                prop3: [ "eyead/prop3/pngFile", 200, 560 ], /* odwrócony banner */
+                prop1: [ "eyead/prop1/pngFile", 200, 200 ], 
+                prop2: [ "eyead/prop2/pngFile", 560, 200 ], 
+                prop3: [ "eyead/prop3/pngFile", 200, 500 ], 
             }
         }
     },
     {
+        // nadane od admina
         isImport: true,
         index: {
             importID: 9
         }
     },
     {
+        // nadane od admina
         isImport: true,
         index: {
             importID: 9
         }
     },
     {
+        // nadane od admina
         isImport: true,
         index: {
             importID: 9
         }
     },
     {
+        // nadane od admina
         isImport: true,
         index: {
             importID: 9
+        }
+    },
+    {
+        // nadane od admina
+        isImport: true,
+        index: {
+            importID: 0
+        }
+    },
+    {
+        // nadane od admina
+        isImport: true,
+        index: {
+            importID: 0
+        }
+    },
+    {
+        // od: Saimon Delta#1200
+        // id: 16
+        isImport: false,
+        index: {
+            behavior: {
+                title: "Strike Unit",
+                href: "https://discord.gg/zyxN5ghw9G",
+                blockedhostes: [
+                    "discord.gg"
+                ]
+            },
+            constant: {
+                prop1: [ "id16/prop1/pngFile", 200, 200 ],
+                prop2: [ "id16/prop2/pngFile", 200*(16/9), 200 ],
+                prop3: [ "id16/prop3/pngFile", 200, 200*(800/444)],
+            }
+        }
+    },
+    {
+        // promocja reklamowa
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // promocja reklamowa
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // promocja reklamowa
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // promocja reklamowa
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // promocja reklamowa
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // nadane od admina
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // nadane od admina
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // dzień chłopaka 2022
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // dzień chłopaka 2022
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // dzień chłopaka 2022
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // dzień chłopaka 2022
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // dzień chłopaka 2022
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // dzień chłopaka 2022
+        isImport: true,
+        index: {
+            importID: 16
+        }
+    },
+    {
+        // dzień chłopaka 2022
+        isImport: true,
+        index: {
+            importID: 16
         }
     },
 ]
