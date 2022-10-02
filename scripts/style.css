@@ -1,4 +1,4 @@
-html {
+html * {
     scroll-behavior: smooth;
 }
 
@@ -48,8 +48,10 @@ button {
     background: transparent;
     border: 3px solid transparent;
     padding: 3px 1rem;
+    margin-left: 3.5px;
     min-width: 100px;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 button { border: 3px solid var(--color-1-w); color: var(--color-3); }
@@ -98,4 +100,8 @@ button.fill { background: var(--color-1-w); color: var(--color-3); }
 #header a {
     color: var(--color-1-w);
     text-decoration: none;
+}
+
+#header div::-webkit-scrollbar {
+    display: none;
 }
