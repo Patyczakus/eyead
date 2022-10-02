@@ -13,7 +13,6 @@ var rootTable = [
                 href: "https://patryktopek.tk",
                 blockedhostes: [
                     "patryktopek.tk",
-                    "patyczakus.github.io",
                     "127.0.0.1"
                 ]
             },
@@ -101,7 +100,7 @@ var rootTable = [
                 title: "EyeAd",
                 href: "https://eyead.tk",
                 blockedhostes: [
-                    "eyead.tk"
+                    "www.eyead.tk"
                 ]
             },
             constant: {
