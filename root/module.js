@@ -269,6 +269,41 @@ var rootTable = [
             importID: 16
         }
     },
+    {
+        // paczka urodzinowa
+        isImport: true,
+        index: {
+            importID: 3
+        }
+    },
+    {
+        // paczka urodzinowa
+        isImport: true,
+        index: {
+            importID: 3
+        }
+    },
+    {
+        // paczka urodzinowa
+        isImport: true,
+        index: {
+            importID: 3
+        }
+    },
+    {
+        // paczka urodzinowa
+        isImport: true,
+        index: {
+            importID: 3
+        }
+    },
+    {
+        // paczka urodzinowa
+        isImport: true,
+        index: {
+            importID: 3
+        }
+    },
 ]
 
 function ad_network (newAd = Boolean()) {
@@ -301,7 +336,7 @@ function ad_network (newAd = Boolean()) {
     }
 
 
-    if (location == null || rootParent.behavior.blockedhostes.indexOf(window.parent.location.hostname) > -1) return ad_network(true)
+    if (location == null/* || rootParent.behavior.blockedhostes.indexOf(window.parent.location.hostname) > -1*/) return ad_network(true)
 
     location[0] = location[0]
         .replace("pngFile", "main.png")
