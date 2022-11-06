@@ -343,7 +343,7 @@ function ad_network (newAd = Boolean()) {
         .replace("jpgFile", "main.jpg")
         .replace("gifFile", "main.gif")
 
-    if (newAd) console.log({ loc: location, typeID: type, random: random, imported: rootTable[random].isImport, devInfo: [ rootParent.behavior.blockedhostes.indexOf(window.parent.location.hostname) == -1, rootParent ] })
+    if (newAd) console.log({ loc: location, typeID: type, random: random, imported: rootTable[random].isImport, devInfo: [ /*rootParent.behavior.blockedhostes.indexOf(window.parent.location.hostname) == -1,*/ rootParent ] })
 
     if (!newAd) {
         if (type != acctualType) {
